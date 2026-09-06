@@ -23,6 +23,14 @@ import {
   MoveHorizontal,
 } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableHead,
+  TableCell,
+} from '@/components/ui/table';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   PRESETS,
@@ -902,30 +910,30 @@ export default function Lab() {
           </div>
           {records.length ? (
             <div className="record-table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>차시</th>
-                    <th>시각</th>
-                    <th>모드</th>
-                    <th>언덕 높이 1 · 2 · 3 · 4</th>
-                    <th>속력</th>
-                    <th>높이</th>
-                  </tr>
-                </thead>
-                <tbody>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>차시</TableHead>
+                    <TableHead>시각</TableHead>
+                    <TableHead>모드</TableHead>
+                    <TableHead>언덕 높이 1 · 2 · 3 · 4</TableHead>
+                    <TableHead>속력</TableHead>
+                    <TableHead>높이</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
                   {records.map((r, i) => (
-                    <tr key={i}>
-                      <td>{r.lesson}차시</td>
-                      <td>{r.at}</td>
-                      <td>{r.mode}</td>
-                      <td>{r.levels.join(' / ')} %</td>
-                      <td>{r.speed} m/s</td>
-                      <td>{r.h} m</td>
-                    </tr>
+                    <TableRow key={i}>
+                      <TableCell>{r.lesson}차시</TableCell>
+                      <TableCell>{r.at}</TableCell>
+                      <TableCell>{r.mode}</TableCell>
+                      <TableCell>{r.levels.join(' / ')} %</TableCell>
+                      <TableCell>{r.speed} m/s</TableCell>
+                      <TableCell>{r.h} m</TableCell>
+                    </TableRow>
                   ))}
-                </tbody>
-              </table>
+                </TableBody>
+              </Table>
             </div>
           ) : (
             <div className="empty-record">
