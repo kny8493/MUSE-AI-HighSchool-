@@ -47,7 +47,7 @@ import type { PoseLandmarker } from '@mediapipe/tasks-vision';
 const lessons = [
   {
     title: '언덕과 공의 운동',
-    short: '물리 탐구',
+    short: '높이·속력 비교',
     question: '언덕의 높이가 달라지면 공은 어떻게 움직일까?',
     steps: [
       '출발 언덕의 높이만 바꾸어 보세요.',
@@ -58,7 +58,7 @@ const lessons = [
   },
   {
     title: '몸으로 바꾸는 지형',
-    short: 'AI 체험',
+    short: '몸동작으로 조절',
     question: 'AI는 내 몸의 어떤 정보를 화면에 전달할까?',
     steps: [
       '몸동작 모드에서 카메라를 켜세요.',
@@ -69,7 +69,7 @@ const lessons = [
   },
   {
     title: '골까지 보내는 전략',
-    short: '전략 실험',
+    short: '골 도착 도전',
     question: '어느 언덕을 언제 바꿔야 공이 골에 도착할까?',
     steps: [
       '도전 지형을 불러오고 이동 전략을 정하세요.',
@@ -80,7 +80,7 @@ const lessons = [
   },
   {
     title: '나래관에서 확인하기',
-    short: '현장 체험',
+    short: '과학관에서 비교',
     question: '웹에서 세운 예상은 실제 전시에서도 맞을까?',
     steps: [
       '1~4명씩 체험 구역과 안내 수칙을 확인하세요.',
